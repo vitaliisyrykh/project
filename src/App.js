@@ -1,9 +1,9 @@
 import React from 'react';
-import Form from './components/forms'
+import FormPage from './components/form-page'
 
 function App() {
   return (
-    <Form/>
+    <FormPage />
    
   );
 }

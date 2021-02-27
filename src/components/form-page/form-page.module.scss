@@ -1,0 +1,9 @@
+@import '../../common/styles/_mainStyles';
+
+.main {
+  @extend %background-color
+}
+
+.header {
+  display: flex;
+}
