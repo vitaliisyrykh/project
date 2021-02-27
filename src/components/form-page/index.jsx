@@ -5,9 +5,7 @@ import styles from './form-page.module.scss';
 
 const FormPage = props => {
   const imgMainLogo = 'https://www.squadhelp.com/img/logo.png'
-  const styles = {
-    backgroundColor: 'black'
-  }
+  
   let isSignIn = true;
   const handleIssignBtn =()=>{
     isSignIn = !isSignIn;
@@ -16,8 +14,8 @@ const FormPage = props => {
 
   return (
     <BrowserRouter>
-      <main>
-        <header>
+      <main className={styles.main}>
+        <header className={styles.header}>
           <Link to='/'>
             <img alt='mainLogo' src={imgMainLogo} style={styles} />
           </Link>
