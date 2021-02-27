@@ -15,6 +15,7 @@ export const SIGN_IN_SCHEMA = Yup.object({
     )
     .required(),
   name: Yup.string()
-    .matches(/^[a-z0-9_-]{3,15}$/, 'Name must be abc leters').required(),
+    .matches(/^[a-z0-9_-]{3,15}$/, 'Name must be abc leters and no less free letters').required(),
+  nikName : Yup.string().matches(/^([a-z0-9_-]{3,15}$)(?=.*?[#?!@$ %^&*-])/, 'Nik Name must be abc letter').required(), 
 
 });
