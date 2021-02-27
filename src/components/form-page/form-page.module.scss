@@ -1,9 +1,11 @@
 @import '../../common/styles/_mainStyles';
 
 .main {
-  @extend %background-color
+  @extend %background-color;
+  width: 100%;
 }
 
 .header {
   display: flex;
+  justify-content: space-evenly;
 }
