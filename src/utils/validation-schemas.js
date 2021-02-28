@@ -14,8 +14,10 @@ export const SIGN_IN_SCHEMA = Yup.object({
       'Password must contain one big letter and so on....'
     )
     .required(),
-  name: Yup.string()
+  firstName: Yup.string()
     .matches(/^[a-z0-9_-]{3,15}$/, 'Name must be abc leters and no less free letters').required(),
-  nikName : Yup.string().matches(/^([a-z0-9_-]{3,15}$)(?=.*?[#?!@$ %^&*-])/, 'Nik Name must be abc letter').required(), 
+    lastName: Yup.string()
+    .matches(/^[a-z0-9_-]{3,15}$/, 'Name must be abc leters and no less free letters').required(),
+  nikName : Yup.string().matches(/^([a-z0-9_-]{3,15}$)/, 'Nik Name must be abc letter').required(), 
 
 });

@@ -23,6 +23,7 @@ class FormPage extends React.Component {
     return (
       <BrowserRouter>
         <main className={styles.main}>
+          
           <header className={styles.header}>
             <Link to='/'>
               <img alt='mainLogo' src={this.state.imgMainLogo}  className={styles.imgLogo} />
@@ -30,8 +31,8 @@ class FormPage extends React.Component {
             <Link to={this.state.isSignIn?'/signIn':'/signUp'} onClick={this.handleIssignBtn}>
               <button className={styles.btn}>{this.state.isSignIn?'Sign In':'Sign Up'}</button>
             </Link>
-  
           </header>
+          
           <Switch>
             {/* <Route path='/'>
               <FormPage/>
@@ -43,6 +44,7 @@ class FormPage extends React.Component {
               <SignUp/>
             </Route> 
           </Switch>
+        
         </main>
       </BrowserRouter>
     )

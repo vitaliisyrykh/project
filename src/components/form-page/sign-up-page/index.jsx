@@ -3,6 +3,16 @@
  import {SIGN_IN_SCHEMA} from '../../../utils/validation-schemas'
 
  const SignUP = props => {
+  
+  const defaultValues = {
+    email: '',
+    password: '',
+    name: '',
+    nikName: '',
+    confirmPassword: '',
+
+  }
+  
   const onSubmit = (value, formikBag) => {
     console.log(value)
     console.log(formikBag)
@@ -11,14 +21,14 @@
   
   return(
      <section>
-       <Formik validationSchema={SIGN_IN_SCHEMA} onSubmit={onSubmit}>
+       <Formik initialValues={defaultValues} validationSchema={SIGN_IN_SCHEMA} onSubmit={onSubmit}>
        {formProps => {
         return (
           <Form>
-            <Field name='name' placeholder='First Name' />
+            <Field name='firstName' placeholder='First Name' />
             <ErrorMessage component='span' name='name' />
 
-            <Field name='name' placeholder='Last Name' />
+            <Field name='lastName' placeholder='Last Name' />
             <ErrorMessage component='span' name='name' />
 
             <Field name='nikName' placeholder='Display Name' />
