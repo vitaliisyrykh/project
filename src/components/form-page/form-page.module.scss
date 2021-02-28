@@ -1,11 +1,27 @@
 @import '../../common/styles/_mainStyles';
 
+* {
+  box-sizing: border-box;
+}
+
 .main {
   @extend %background-color;
   width: 100%;
+  height: 100vh;
 }
 
 .header {
   display: flex;
   justify-content: space-evenly;
+}
+
+.imgLogo {
+  padding-right: 130px;
+  padding-top: 30px;
+}
+
+.btn {
+  margin-left: 130px;
+  margin-top: 30px;
+  padding: 10px;
 }

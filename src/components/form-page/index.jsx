@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route, Link } from 'react-router-dom'
 import styles from './form-page.module.scss';
-import SignIn from './sign-in-page/form';
+import SignIn from './sign-in-page';
 import SignUp from './sign-up-page';
 
 class FormPage extends React.Component {
@@ -25,10 +25,10 @@ class FormPage extends React.Component {
         <main className={styles.main}>
           <header className={styles.header}>
             <Link to='/'>
-              <img alt='mainLogo' src={this.state.imgMainLogo}  />
+              <img alt='mainLogo' src={this.state.imgMainLogo}  className={styles.imgLogo} />
             </Link>
             <Link to={this.state.isSignIn?'/signIn':'/signUp'} onClick={this.handleIssignBtn}>
-              <button >{this.state.isSignIn?'Sign In':'Sign Up'}</button>
+              <button className={styles.btn}>{this.state.isSignIn?'Sign In':'Sign Up'}</button>
             </Link>
   
           </header>
