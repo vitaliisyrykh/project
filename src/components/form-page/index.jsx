@@ -1,7 +1,8 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route, Link } from 'react-router-dom'
-import SignIn from './sign-in-page/form';
 import styles from './form-page.module.scss';
+import SignIn from './sign-in-page/form';
+import SignUp from './sign-up-page';
 
 class FormPage extends React.Component {
   constructor(props){
@@ -26,12 +27,11 @@ class FormPage extends React.Component {
             <Link to='/'>
               <img alt='mainLogo' src={this.state.imgMainLogo}  />
             </Link>
-            <Link to='/signIn' onClick={this.handleIssignBtn}>
+            <Link to={this.state.isSignIn?'/signIn':'/signUp'} onClick={this.handleIssignBtn}>
               <button >{this.state.isSignIn?'Sign In':'Sign Up'}</button>
             </Link>
   
           </header>
-          <h1>LOGIN TO YOU ACCOUNT</h1>
           <Switch>
             {/* <Route path='/'>
               <FormPage/>
@@ -39,9 +39,9 @@ class FormPage extends React.Component {
             <Route path='/signIn'>
               <SignIn />
             </Route>
-            {/* <Route path='/signUp'>
-              <SignUP/>
-            </Route> */}
+             <Route path='/signUp'>
+              <SignUp/>
+            </Route> 
           </Switch>
         </main>
       </BrowserRouter>
