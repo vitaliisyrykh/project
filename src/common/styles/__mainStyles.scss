@@ -1,3 +1,15 @@
+*{
+  box-sizing: border-box;
+}
+
 %background-color{
   background-color: #3ea9f6;
 }
+%heading{
+  text-transform: uppercase;
+  margin-top : 100px;
+  
+  font-size:2rem;
+  color:white;
+}
+
