@@ -13,21 +13,19 @@ const FormSignIn = props => {
     <Formik onSubmit={onSubmit} validationSchema={SIGN_IN_SCHEMA}>
       {formProps => {
         return (
+          <section>
+          <h1>LOGIN TO YOU ACCOUNT</h1>
           <Form>
             <Field name='email' placeholder='Email' />
             <ErrorMessage component='span' name='email' />
 
-            <Field
-              
-              name='password'
-              type='password'
-              placeholder='Password'
-            />
+            <Field name='password' type='password' placeholder='Password'/>
             
             <ErrorMessage component='span' name='password' />
 
             <Field type='submit' value='LOGIN' />
           </Form>
+          </section>
         )
       }}
     </Formik>
