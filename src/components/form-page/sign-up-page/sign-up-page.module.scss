@@ -2,6 +2,7 @@
 
 .containerSignUp{
   @extend %flexSettingsForForm;
+  box-sizing: border-box;
 }
 .headingSignUp{
   @extend %heading;
@@ -22,9 +23,18 @@
 }
 
 .inputContainer>input{
+  @extend %inputForms;
    margin: 10px; 
-  padding:10px;
+  
 }
-.widthModif>input{
+.widthModifSubmitConteiner{
+  box-sizing: border-box;
   width: 100%;
+  padding: 0 15px;
+  
+}
+.modifForSubmit>input{
+  @extend %submitForms;
+  width: 100%;
+  margin: 0;
 }

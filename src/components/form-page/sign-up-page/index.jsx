@@ -60,8 +60,8 @@
                   <Field name='' type='password' placeholder='Confirm Password'/>
                 </div>
                 
-                <div className={`${styles.inputContainer} ${styles.widthModif}`}>
-                  <Field type='submit' value='LOGIN' />
+                <div className={`${styles.inputContainer} ${styles.modifForSubmit} ${styles.widthModifSubmitConteiner}`}>
+                  <Field type='submit' value='Create Account' />
                 </div>
               </div>
             </Form>

@@ -20,15 +20,11 @@
 }
 
 .inputSignIn>input{
+  @extend %inputForms;
+  
   width:100%;
-  padding: 10px;
-  border: none;
-
-  border-radius: 5px;
+  
 }
 .submit>input{
-  border: none;
-  
-  color: white;
-  background-color:#5bd3d1;
+  @extend %submitForms;
 }
