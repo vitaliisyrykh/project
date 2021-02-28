@@ -57,7 +57,8 @@
                 </div>
                 
                 <div className={styles.inputContainer}>
-                  <Field name='' type='password' placeholder='Confirm Password'/>
+                  <Field name='passwordConfirmation' type='password' placeholder='Confirm Password'/>
+                  <ErrorMessage component='span' name='passwordConfirmation' />
                 </div>
                 
                 <div className={`${styles.inputContainer} ${styles.modifForSubmit} ${styles.widthModifSubmitConteiner}`}>
