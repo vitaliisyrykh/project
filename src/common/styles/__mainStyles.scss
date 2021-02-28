@@ -7,9 +7,17 @@
 }
 %heading{
   text-transform: uppercase;
-  margin-top : 100px;
+  margin-top : 60px;
   
   font-size:2rem;
   color:white;
+}
+%flexSettingsForForm{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+
+  padding-top: 50px;
 }
 
