@@ -1,16 +1,12 @@
 @import '../../../common/styles/_mainStyles';
 
 .containerSignIn{
-  display: flex;
-  flex-direction: column;
-  justify-content:center;
-  align-items: center;
-
-  padding-top: 50px;
+  @extend %flexSettingsForForm;
 }
 
-.heading {
+.headingSignIn {
   @extend %heading;
+ 
 }
 
 .containerFormSignIn{

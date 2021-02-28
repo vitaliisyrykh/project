@@ -19,7 +19,7 @@ const FormSignIn = props => {
       {formProps => {
         return (
           <section className={styles.containerSignIn}>
-          <h1 className={styles.heading}>LOGIN TO YOU ACCOUNT</h1>
+          <h1 className={styles.headingSignIn}>LOGIN TO YOU ACCOUNT</h1>
           <Form >
             <div className={styles.containerFormSignIn}>
               <div className={`${styles.inputSignIn} ${styles.inputContainer}`}>
