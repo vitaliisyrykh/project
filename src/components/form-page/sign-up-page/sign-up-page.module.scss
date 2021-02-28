@@ -1,0 +1,30 @@
+@import '../../../common/styles/_mainStyles';
+
+.containerSignUp{
+  @extend %flexSettingsForForm;
+}
+.headingSignUp{
+  @extend %heading;
+  &__paddingModificate{
+    margin-bottom: 10px;
+  }
+}
+.paragraph{
+  color: white;
+  font-family: sans-serif;
+}
+
+.inputsContainer{
+  width:400px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.inputContainer>input{
+   margin: 10px; 
+  padding:10px;
+}
+.widthModif>input{
+  width: 100%;
+}
