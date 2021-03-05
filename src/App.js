@@ -1,11 +1,16 @@
-import React from 'react';
-import FormPage from './components/form-page'
+import React, { useState } from 'react'
+import FormPage from './components/form-page';
+import { themeContext } from './contexts/contexts'
+//import SwitchTheme from './components/switch-theme'
 
-function App() {
+function App () {
+  const [isLight, setIsLight] = useState(true)
+
   return (
-    <FormPage />
-   
-  );
+    <themeContext.Provider value={[isLight, setIsLight]}>
+      <FormPage />
+    </themeContext.Provider>
+  )
 }
 
-export default App;
+export default App
