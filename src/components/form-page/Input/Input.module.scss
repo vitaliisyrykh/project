@@ -1,0 +1,15 @@
+@import '../../../common/styles/_mainStyles';
+
+.inputContainer>input{
+  @extend %inputForms;
+   margin: 10px; 
+
+}
+
+.validInput{
+  border: 2px solid green;
+}
+
+.unvalidInput{
+  border: 2px solid red;
+}
