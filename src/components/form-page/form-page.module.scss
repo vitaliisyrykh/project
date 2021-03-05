@@ -6,22 +6,24 @@
 
 .main {
   @extend %background-color;
-  width: 100%;
+  max-width: 1600px;
   height: 100vh;
+  margin: 0 auto;
 }
 
 .header {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .imgLogo {
   padding-right: 130px;
   padding-top: 30px;
+  margin-left: 40px;
 }
 
 .btn {
-  margin-left: 130px;
+  margin-right: 160px;
   margin-top: 30px;
   padding: 10px;
   @extend %background-color;
