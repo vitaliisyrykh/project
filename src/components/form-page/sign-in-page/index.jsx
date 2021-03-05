@@ -24,7 +24,7 @@ const FormSignIn = props => {
             <div className={styles.containerFormSignIn}>
               <div className={`${styles.inputSignIn} ${styles.inputContainer}`}>
                 <Field name='email' placeholder='Email' />
-                <ErrorMessage component='span' name='email' />
+                <ErrorMessage component='' name='email' />
               </div>
               <div className={`${styles.inputSignIn} ${styles.inputContainer}`}>
                 <Field name='password' type='password' placeholder='Password'/>

@@ -2,18 +2,20 @@
  import { Formik, Field, Form, ErrorMessage } from 'formik';
  import {SIGN_IN_SCHEMA} from '../../../utils/validation-schemas';
  import styles from './sign-up-page.module.scss';
+ import Input from '../Input';
 
  const SignUP = props => {
   
   const defaultValues = {
     email: '',
-    password: '',
     fistName: '',
     lastName: '',
     nikName: '',
+    password: '',
     confirmPassword: '',
 
   }
+
   
   const onSubmit = (value, formikBag) => {
     console.log(value)
@@ -29,41 +31,37 @@
           <section className={styles.containerSignUp}>
             <h2 className={styles.headingSignUp}>create an account</h2>
             <p className={styles.paragraph}>We always keep your name and email adress private.</p>
-            <Form>
+            <Form >
               <div className={styles.inputsContainer}>
-                <div className={styles.inputContainer}>
-                  <Field name='firstName' placeholder='First Name' />
-                  <ErrorMessage component='span' name='name' />
-                </div>
 
-                <div className={styles.inputContainer}>
-                  <Field name='lastName' placeholder='Last Name' />
-                  <ErrorMessage component='span' name='name' />
-                </div>
+                    <Field name='firstName'  type='text'>
+                      {fieldProps=><Input {...fieldProps} placeholder='First Name'/>}
+                    </Field>
 
-                <div className={styles.inputContainer}>
-                  <Field name='nikName' placeholder='Display Name' />
-                  <ErrorMessage component='span' name='nikName' />
-                </div>
+                    <Field name='lasttName' type='text'>
+                      {fieldProps=><Input {...fieldProps} placeholder='Last Name'/>}
+                    </Field>
+                    
+                    <Field name='nikName' type='text'>
+                      {fieldProps=><Input {...fieldProps} placeholder='Display Name'/>}
+                    </Field>
+
+                    <Field name='email' type='email'>
+                      {fieldProps=><Input {...fieldProps} placeholder='Email'/>}
+                    </Field>
                 
-                <div className={styles.inputContainer}>
-                  <Field name='email' placeholder='Email'/>
-                  <ErrorMessage name='email' component='span'/>
-                </div>
-                
-                <div className={styles.inputContainer}>                   
-                  <Field name='password' type='password' placeholder='Password'/>
-                  <ErrorMessage component='span' name='password' />
-                </div>
-                
-                <div className={styles.inputContainer}>
-                  <Field name='passwordConfirmation' type='password' placeholder='Confirm Password'/>
-                  <ErrorMessage component='span' name='passwordConfirmation' />
-                </div>
+                    <Field name='password' type='password'>
+                      {fieldProps=><Input {...fieldProps} placeholder='Password'/>}
+                    </Field>
+
+                    <Field name='passwordConfirmation' type='password'>
+                      {fieldProps=><Input {...fieldProps} placeholder='Confirm Password'/>}
+                    </Field>
                 
                 <div className={`${styles.inputContainer} ${styles.modifForSubmit} ${styles.widthModifSubmitConteiner}`}>
                   <Field type='submit' value='Create Account' />
                 </div>
+              
               </div>
             </Form>
           </section>

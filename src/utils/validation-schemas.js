@@ -8,18 +8,21 @@ export const SIGN_IN_SCHEMA = Yup.object({
   email: Yup.string()
     .email('Email must be a valid email')
     .required(),
-  password: Yup.string()
-    .matches(
-      /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,32}$/,
-      'Password must contain one big letter and so on....'
-    )
-    .required(),
-  firstName: Yup.string()
+    
+    firstName: Yup.string()
     .matches(/^[a-z0-9_-]{3,15}$/, 'Name must be abc leters and no less free letters').required(),
+    
     lastName: Yup.string()
     .matches(/^[a-z0-9_-]{3,15}$/, 'Name must be abc leters and no less free letters').required(),
-  nikName : Yup.string().matches(/^([a-z0-9_-]{3,15}$)/, 'Nik Name must be abc letter').required(),
-  passwordConfirmation: Yup.string()
-     .oneOf([Yup.ref('password'), null], 'Passwords must match'), 
+    
+    nikName : Yup.string().matches(/^([a-z0-9_-]{3,15}$)/, 'Nik Name must be abc letter').required(),
+    password: Yup.string()
+      .matches(
+        /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,32}$/,
+        'Password must contain one big letter and so on....'
+      ).required(),
+    
+    passwordConfirmation: Yup.string()
+    .oneOf([Yup.ref('password'), null], 'Passwords must match'), 
 
 });
