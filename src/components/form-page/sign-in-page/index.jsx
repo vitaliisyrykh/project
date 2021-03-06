@@ -1,7 +1,8 @@
-import React from 'react'
-import { Formik, Field, Form, ErrorMessage } from 'formik'
-import { SIGN_IN_SCHEMA } from '../../../utils/validation-schemas'
+import React from 'react';
+import { Formik, Field, Form, ErrorMessage } from 'formik';
+import { SIGN_IN_SCHEMA } from '../../../utils/validation-schemas';
 import styles from './sign-in-page.module.scss';
+import cx from 'classnames';
 
 const FormSignIn = props => {
   const defaultValues = {
@@ -13,12 +14,14 @@ const FormSignIn = props => {
     console.log(value)
     console.log(formikBag)
   }
+  
 
   return (
     <Formik initialValues={defaultValues} onSubmit={onSubmit} validationSchema={SIGN_IN_SCHEMA}>
       {formProps => {
         return (
           <section className={styles.containerSignIn}>
+            {console.log(formProps)}
           <h1 className={styles.headingSignIn}>LOGIN TO YOU ACCOUNT</h1>
           <Form >
             <div className={styles.containerFormSignIn}>
