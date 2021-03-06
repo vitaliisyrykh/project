@@ -29,3 +29,9 @@
 .submit>input{
   @extend %submitForms;
 }
+.validInput{
+  @extend %validInput;
+}
+.unvalidInput{
+  @extend %unvalidInput;
+}
