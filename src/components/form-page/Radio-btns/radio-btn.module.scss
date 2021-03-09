@@ -1,0 +1,25 @@
+.radioContainer{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5px 15px;
+  border: 1px solid white;
+}
+
+.labelContainer{
+  display: flex;
+  width: 100%;
+  &>input{
+    margin-top: 23px;
+  }
+  &>h3{
+    font-size:15px;
+    color: white;
+    margin-left: 10px;
+  }
+}
+.text{
+  font-family: sans-serif;
+  font-size:13px;
+  color: white;
+  margin: 10px;
+}
