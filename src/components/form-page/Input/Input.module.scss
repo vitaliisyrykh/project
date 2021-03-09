@@ -1,15 +1,42 @@
 @import '../../../common/styles/_mainStyles';
 
-.inputContainer>input{
+.input input {
   @extend %inputForms;
-   margin: 10px; 
-
+  
+}
+.posRelativeModif{
+  position: relative;
 }
 
-.validInput>input{
+.validInput>input {
   border: 2px solid green;
 }
 
-.unvalidInput>input{
+.unvalidInput>input {
   border: 2px solid red;
+}
+
+.inputContainerError>div {
+  max-width: 75%;
+  position: absolute;
+  color: white;
+  background-color: red;
+  border: 1px solid red;
+  left: 10px;
+  text-transform: capitalize;
+  padding: 10px;
+  z-index: 100;
+
+  &:before {
+    content: '';
+
+    border: solid transparent;
+    position: absolute;
+    bottom: 100%;
+	  left: 17%;
+    border-bottom-color: red;
+    border-width: 9px;
+    margin-left: 0;
+  }
+
 }

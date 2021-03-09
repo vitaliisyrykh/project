@@ -28,16 +28,13 @@ class FormPage extends React.Component {
             <Link to='/'>
               <img alt='mainLogo' src={this.state.imgMainLogo}  className={styles.imgLogo} />
             </Link>
-            <Link to={this.state.isSignIn?'/signIn':'/signUp'} onClick={this.handleIssignBtn}>
+            <Link to={this.state.isSignIn?'/':'/signUp'} onClick={this.handleIssignBtn}>
               <button className={styles.btn}>{this.state.isSignIn?'Sign In':'Sign Up'}</button>
             </Link>
           </header>
           
           <Switch>
-            {/* <Route path='/'>
-              <FormPage/>
-            </Route> */}
-            <Route path='/signIn'>
+            <Route exact path='/'>
               <SignIn />
             </Route>
              <Route path='/signUp'>
