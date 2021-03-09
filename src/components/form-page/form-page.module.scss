@@ -7,8 +7,9 @@
 .main {
   @extend %background-color;
   max-width: 1600px;
-  height: 100vh;
+  height: 100%;
   margin: 0 auto;
+  padding-bottom: 100px;
 }
 
 .header {
