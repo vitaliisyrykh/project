@@ -9,13 +9,12 @@ export const SIGN_IN_SCHEMA = Yup.object({
     .email('Email must be a valid email')
     .required(),
     
-    firstName: Yup.string()
-    .matches(/^[a-z0-9_-]{3,15}$/, 'Name must be abc leters and no less free letters').required(),
+    firstName: Yup.string().matches(/^([a-z0-9_-]{3,15}$)/, 'Nik Name must be abc letter').required(),
     
-    lastName: Yup.string()
-    .matches(/^[a-z0-9_-]{3,15}$/, 'Name must be abc leters and no less free letters').required(),
+    lastName: Yup.string().matches(/^([a-z0-9_-]{3,15}$)/, 'Nik Name must be abc letter').required(),
     
     nikName : Yup.string().matches(/^([a-z0-9_-]{3,15}$)/, 'Nik Name must be abc letter').required(),
+    
     password: Yup.string()
       .matches(
         /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,32}$/,
@@ -23,6 +22,8 @@ export const SIGN_IN_SCHEMA = Yup.object({
       ).required(),
     
     passwordConfirmation: Yup.string()
-    .oneOf([Yup.ref('password'), null], 'Passwords must match'), 
+    .oneOf([Yup.ref('password'), null], 'Passwords must match'),
+    
+    role: Yup.string().oneOf([Yup.ref('role')],null).required(),
 
 });
