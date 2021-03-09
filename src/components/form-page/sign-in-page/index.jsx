@@ -1,8 +1,9 @@
 import React from 'react';
-import { Formik, Field, Form, ErrorMessage } from 'formik';
+import { Formik, Field, Form, } from 'formik';
 import { SIGN_IN_SCHEMA } from '../../../utils/validation-schemas';
 import styles from './sign-in-page.module.scss';
-import cx from 'classnames';
+
+import Input from '../Input';
 
 const FormSignIn = props => {
   const defaultValues = {
@@ -18,29 +19,34 @@ const FormSignIn = props => {
 
   return (
     <Formik initialValues={defaultValues} onSubmit={onSubmit} validationSchema={SIGN_IN_SCHEMA}>
-      {formProps => {
-        return (
+      
           <section className={styles.containerSignIn}>
-            {console.log(formProps)}
           <h1 className={styles.headingSignIn}>LOGIN TO YOU ACCOUNT</h1>
           <Form >
             <div className={styles.containerFormSignIn}>
               <div className={`${styles.inputSignIn} ${styles.inputContainer}`}>
-                <Field name='email' placeholder='Email' />
-                <ErrorMessage component='' name='email' />
-              </div>
-              <div className={`${styles.inputSignIn} ${styles.inputContainer}`}>
-                <Field name='password' type='password' placeholder='Password'/>
-                <ErrorMessage component='span' name='password' />
-              </div>
-              <div className={`${styles.inputSignIn} ${styles.inputContainer} ${styles.submit}`}>
+                <Field name={'email'}  >
+                  {fieldProps => <Input {...fieldProps}   placeholder='Email'/>}
+                </Field>
+             </div>
+             <div className={`${styles.inputSignIn} ${styles.inputContainer}`}>
+                <Field name='password'  >
+                  {fieldProps => <Input {...fieldProps}   placeholder='Password' type='password'/>}
+                </Field>
+             </div>
+             <div>
+               <label className={styles.remeberMe}>
+                 <Field type="checkbox" name="remeber me"/>
+                 Remember me
+               </label>
+             </div>
+             <div className={`${styles.inputSignIn} ${styles.inputContainer} ${styles.submit}`}>
                 <Field type='submit' value='LOGIN' />
               </div>
             </div>
           </Form>
           </section>
-        )
-      }}
+    
     </Formik>
   )
 }
