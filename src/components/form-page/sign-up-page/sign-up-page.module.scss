@@ -22,8 +22,8 @@
   flex-wrap: wrap;
 }
 
-.inputContainer>input{
-  @extend %inputForms;
+.inputContainer input{
+  
    margin: 10px; 
   
 }
@@ -37,10 +37,8 @@
   @extend %submitForms;
   width: 100%;
   margin: 0;
+  
+  border-radius: 5px;
+  padding:15px;
 }
-.inputContainerError>span{
-  position: absolute;
-    color: red;
-    border: 1px solid red;
-    padding: 5px;
-}
+

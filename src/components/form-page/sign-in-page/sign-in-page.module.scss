@@ -1,37 +1,54 @@
 @import '../../../common/styles/_mainStyles';
 @import '../../../common/styles/pointers';
 
-.containerSignIn{
+.containerSignIn {
   @extend %flexSettingsForForm;
 }
 
 .headingSignIn {
   @extend %heading;
- 
+
 }
 
-.containerFormSignIn{
+.containerFormSignIn {
   display: flex;
   flex-direction: column;
   width: 400px;
 }
 
-.inputContainer{
+
+.inputContainer input {
+
   margin: 10px;
+
 }
 
-.inputSignIn>input{
+.inputSignIn input {
   @extend %inputForms;
-  
-  width:100%;
-  
+  width: 100%;
 }
-.submit>input{
+
+.submit>input {
   @extend %submitForms;
 }
-.validInput{
+
+.validInput {
   @extend %validInput;
 }
-.unvalidInput{
+
+.unvalidInput {
   @extend %unvalidInput;
+}
+.inputContainerError>span {
+  position: absolute;
+    color: red;
+    border: 1px solid red;
+    padding: 5px;
+   
+}
+
+.remeberMe{
+  color: white;
+  margin-left: 10px;
+  font-family: sans-serif;
 }
